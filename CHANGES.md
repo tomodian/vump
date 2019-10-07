@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.2.2
+
+- Bugfix: Top-level change file was not globbed correctly
+
 ## 0.2.1
 
 - Bugfix: Skip files that have no changes on Next section
