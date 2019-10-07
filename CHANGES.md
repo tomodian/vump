@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.2.1
+
+- Bugfix: Skip files that have no changes on Next section
+
 ## 0.2.0
 
 - Bugfix: Excluded node_modules in nested directories
