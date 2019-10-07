@@ -2,6 +2,7 @@
 
 ## Next
 
+- Bugfix: Excluded node_modules in nested directories
 - Cleanup: Removed @types/mocha
 
 ## 0.1.0
