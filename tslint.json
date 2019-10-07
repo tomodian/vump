@@ -1,0 +1,8 @@
+{
+  "extends": "@oclif/tslint",
+  "rules": {
+    "arrow-parens": true,
+    "object-curly-spacing": [true, "always"],
+    "whitespace": [true, "check-module"]
+  }
+}
