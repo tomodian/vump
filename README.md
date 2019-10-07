@@ -33,6 +33,7 @@ USAGE
 * [`vump help [COMMAND]`](#vump-help-command)
 * [`vump list`](#vump-list)
 * [`vump next`](#vump-next)
+* [`vump to VERSION`](#vump-to-version)
 
 ## `vump help [COMMAND]`
 
@@ -53,7 +54,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1
 
 ## `vump list`
 
-list all the CHANGES.md
+Recursively list all the CHANGES.md
 
 ```
 USAGE
@@ -93,4 +94,21 @@ EXAMPLE
 ```
 
 _See code: [src/commands/next.ts](https://github.com/tomodian/vump/blob/v0.1.0/src/commands/next.ts)_
+
+## `vump to VERSION`
+
+Bump to the given version
+
+```
+USAGE
+  $ vump to VERSION
+
+OPTIONS
+  -h, --help  show CLI help
+
+EXAMPLE
+  $ vump to 0.1.0
+```
+
+_See code: [src/commands/to.ts](https://github.com/tomodian/vump/blob/v0.1.0/src/commands/to.ts)_
 <!-- commandsstop -->
