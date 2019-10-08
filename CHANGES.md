@@ -2,6 +2,9 @@
 
 ## Next
 
+- Feature: Added GitHub Actions directory
+- Cleanup: Removed examples directory
+
 ## 0.2.2
 
 - Bugfix: Top-level change file was not globbed correctly
