@@ -18,7 +18,7 @@ jobs:
           - 8
           - 10
 
-    name: Test on Node ${{ matrix.node }}
+    name: Node ${{ matrix.node }}
 
     steps:
       - name: Checkout
