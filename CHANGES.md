@@ -2,6 +2,7 @@
 
 ## Next
 
+- Minor: Added GitHub Actions Badge
 - Feature: Added GitHub Actions directory
 - Cleanup: Removed examples directory
 

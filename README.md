@@ -3,6 +3,7 @@ vump
 
 CLI tool to manage your CHANGES.md, following semver.
 
+[![Test](https://github.com/tomodian/vump/workflows/Test%20on%20Linux/badge.svg)](https://github.com/tomodian/vump/actions?workflow=Test+on+Linux)
 [![Version](https://img.shields.io/npm/v/vump.svg)](https://npmjs.org/package/vump)
 [![Downloads/week](https://img.shields.io/npm/dw/vump.svg)](https://npmjs.org/package/vump)
 [![License](https://img.shields.io/npm/l/vump.svg)](https://github.com/tomodian/vump/blob/master/package.json)
