@@ -21,7 +21,7 @@ $ npm install -g vump
 $ vump COMMAND
 running command...
 $ vump (-v|--version|version)
-vump/0.2.2 darwin-x64 node-v8.10.0
+vump/0.3.0 darwin-x64 node-v8.10.0
 $ vump --help [COMMAND]
 USAGE
   $ vump COMMAND
@@ -34,6 +34,7 @@ USAGE
 * [`vump help [COMMAND]`](#vump-help-command)
 * [`vump list`](#vump-list)
 * [`vump next`](#vump-next)
+* [`vump show VERSION`](#vump-show-version)
 * [`vump to VERSION`](#vump-to-version)
 
 ## `vump help [COMMAND]`
@@ -70,7 +71,7 @@ EXAMPLE
   examples/services/a/CHANGES.md
 ```
 
-_See code: [src/commands/list.ts](https://github.com/tomodian/vump/blob/v0.2.2/src/commands/list.ts)_
+_See code: [src/commands/list.ts](https://github.com/tomodian/vump/blob/v0.3.0/src/commands/list.ts)_
 
 ## `vump next`
 
@@ -94,7 +95,31 @@ EXAMPLE
   (no changes)
 ```
 
-_See code: [src/commands/next.ts](https://github.com/tomodian/vump/blob/v0.2.2/src/commands/next.ts)_
+_See code: [src/commands/next.ts](https://github.com/tomodian/vump/blob/v0.3.0/src/commands/next.ts)_
+
+## `vump show VERSION`
+
+Show previous changes in the given section
+
+```
+USAGE
+  $ vump show VERSION
+
+OPTIONS
+  -h, --help  show CLI help
+
+EXAMPLE
+  $ vump show 0.1.0
+  ## examples/CHANGES.md
+
+  - Feature: This is an example
+
+  ## examples/services/a/CHANGES.md
+
+  (no changes)
+```
+
+_See code: [src/commands/show.ts](https://github.com/tomodian/vump/blob/v0.3.0/src/commands/show.ts)_
 
 ## `vump to VERSION`
 
@@ -111,5 +136,5 @@ EXAMPLE
   $ vump to 0.1.0
 ```
 
-_See code: [src/commands/to.ts](https://github.com/tomodian/vump/blob/v0.2.2/src/commands/to.ts)_
+_See code: [src/commands/to.ts](https://github.com/tomodian/vump/blob/v0.3.0/src/commands/to.ts)_
 <!-- commandsstop -->

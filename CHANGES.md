@@ -2,6 +2,8 @@
 
 ## Next
 
+## 0.3.0
+
 - Feature: Added command tests
 - Feature: Created show command
 - Feature: Created fixtures
