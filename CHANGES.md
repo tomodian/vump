@@ -2,6 +2,7 @@
 
 ## Next
 
+- Feature: Added command tests
 - Feature: Created show command
 - Feature: Created fixtures
 - Minor: Added GitHub Actions Badge
