@@ -66,6 +66,7 @@
   },
   "types": "lib/index.d.ts",
   "jest": {
+    "testEnvironment": "node",
     "moduleFileExtensions": [
       "ts",
       "js"

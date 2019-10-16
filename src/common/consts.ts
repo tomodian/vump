@@ -3,4 +3,7 @@ export default {
   next: 'Next',
   noChanges: '(no changes)',
   postLines: '\n',
+  messages: {
+    noChanges: 'Nothing found.',
+  },
 }
