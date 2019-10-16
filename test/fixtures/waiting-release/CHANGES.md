@@ -2,7 +2,7 @@
 
 ## Next
 
-- Feature: Whatever
+- Feature: Something nice
 
 ## 0.1.0
 

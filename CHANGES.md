@@ -2,6 +2,15 @@
 
 ## Next
 
+## 0.3.0
+
+- Feature: Added command tests
+- Feature: Created show command
+- Feature: Created fixtures
+- Minor: Added GitHub Actions Badge
+- Feature: Added GitHub Actions directory
+- Cleanup: Removed examples directory
+
 ## 0.2.2
 
 - Bugfix: Top-level change file was not globbed correctly

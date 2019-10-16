@@ -23,7 +23,7 @@ examples/services/a/CHANGES.md
     const targets = glob(consts.defaultMatcher)
 
     if (targets.length === 0) {
-      this.log('Nothing found.')
+      this.log(consts.messages.noChanges)
       return
     }
 

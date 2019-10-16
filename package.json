@@ -1,7 +1,7 @@
 {
   "name": "vump",
   "description": "CLI tool to bump your CHANGES.md, following semver",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "author": "Hayato Tomoda @tomodian",
   "bin": {
     "vump": "./bin/run"
@@ -66,6 +66,7 @@
   },
   "types": "lib/index.d.ts",
   "jest": {
+    "testEnvironment": "node",
     "moduleFileExtensions": [
       "ts",
       "js"
