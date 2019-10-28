@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.4.1
+
+- Bugfix: The command 'latest' was not binded into cli
+
 ## 0.4.0
 
 - Feature: Added latest command to show the latest release
