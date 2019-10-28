@@ -21,7 +21,7 @@ $ npm install -g vump
 $ vump COMMAND
 running command...
 $ vump (-v|--version|version)
-vump/0.3.0 darwin-x64 node-v8.10.0
+vump/0.4.0 darwin-x64 node-v8.10.0
 $ vump --help [COMMAND]
 USAGE
   $ vump COMMAND
@@ -32,6 +32,7 @@ USAGE
 # Commands
 <!-- commands -->
 * [`vump help [COMMAND]`](#vump-help-command)
+* [`vump latest`](#vump-latest)
 * [`vump list`](#vump-list)
 * [`vump next`](#vump-next)
 * [`vump show VERSION`](#vump-show-version)
@@ -54,6 +55,24 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.1/src/commands/help.ts)_
 
+## `vump latest`
+
+Show the latest version of CHANGES.md in the current directory
+
+```
+USAGE
+  $ vump latest
+
+OPTIONS
+  -h, --help  show CLI help
+
+EXAMPLE
+  $ vump latest
+  0.1.0
+```
+
+_See code: [src/commands/latest.ts](https://github.com/tomodian/vump/blob/v0.4.0/src/commands/latest.ts)_
+
 ## `vump list`
 
 Recursively list all the CHANGES.md
@@ -71,7 +90,7 @@ EXAMPLE
   examples/services/a/CHANGES.md
 ```
 
-_See code: [src/commands/list.ts](https://github.com/tomodian/vump/blob/v0.3.0/src/commands/list.ts)_
+_See code: [src/commands/list.ts](https://github.com/tomodian/vump/blob/v0.4.0/src/commands/list.ts)_
 
 ## `vump next`
 
@@ -95,7 +114,7 @@ EXAMPLE
   (no changes)
 ```
 
-_See code: [src/commands/next.ts](https://github.com/tomodian/vump/blob/v0.3.0/src/commands/next.ts)_
+_See code: [src/commands/next.ts](https://github.com/tomodian/vump/blob/v0.4.0/src/commands/next.ts)_
 
 ## `vump show VERSION`
 
@@ -119,7 +138,7 @@ EXAMPLE
   (no changes)
 ```
 
-_See code: [src/commands/show.ts](https://github.com/tomodian/vump/blob/v0.3.0/src/commands/show.ts)_
+_See code: [src/commands/show.ts](https://github.com/tomodian/vump/blob/v0.4.0/src/commands/show.ts)_
 
 ## `vump to VERSION`
 
@@ -136,5 +155,5 @@ EXAMPLE
   $ vump to 0.1.0
 ```
 
-_See code: [src/commands/to.ts](https://github.com/tomodian/vump/blob/v0.3.0/src/commands/to.ts)_
+_See code: [src/commands/to.ts](https://github.com/tomodian/vump/blob/v0.4.0/src/commands/to.ts)_
 <!-- commandsstop -->
