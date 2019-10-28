@@ -2,6 +2,8 @@
 
 ## Next
 
+- Feature: Added latest command to show the latest release
+
 ## 0.3.0
 
 - Feature: Added command tests

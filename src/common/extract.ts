@@ -59,3 +59,32 @@ export const fromString = async (version: string, markdown: string): Promise<str
 
   return outs
 }
+
+export const latest = async (path: string): Promise<string | null> => {
+  if (!path || !fs.existsSync(path)) {
+    return null
+  }
+
+  const got = await fs.readFileSync(path, 'utf8')
+
+  const re = /^## \d+.\d+.\d+/m
+
+  const matched = got
+    .split('\n')
+    .map((line) => {
+      const m = line.match(re)
+
+      if (!m) {
+        return
+      }
+
+      return m[0]
+    })
+    .filter((res) => res)
+
+  if (matched.length === 0) {
+    return null
+  }
+
+  return matched[0]!.split('## ')[1] as string
+}

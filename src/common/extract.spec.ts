@@ -63,3 +63,25 @@ describe('fromString', () => {
     )
   })
 })
+
+describe('latest', () => {
+  it('returns undefined on CHANGES.md without history', async () => {
+    const got = await extract.latest(`${__dirname}/../../test/fixtures/no-release/CHANGES.md`)
+
+    try {
+      expect(got).toEqual(null)
+    } catch {
+      throw new Error(`should not come into this section, got ${got}`)
+    }
+  })
+
+  it('returns expected version on CHANGES.md that has history', async () => {
+    const got = await extract.latest(`${__dirname}/../../test/fixtures/long-history/CHANGES.md`)
+
+    try {
+      expect(got).toEqual('10.1.2')
+    } catch {
+      throw new Error(`should not come into this section, got ${got}`)
+    }
+  })
+})
