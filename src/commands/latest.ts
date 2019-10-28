@@ -23,39 +23,16 @@ export default class Latest extends Command {
     const targets = glob(`./${consts.file}`)
 
     if (targets.length === 0) {
-      this.log('Nothing found.')
+      this.log(consts.messages.noChanges)
       return
     }
 
-    const outs: Section[] = []
+    const got = await extract.latest(targets[0])
 
-    await Promise.all(
-      targets.map(async (t) => {
-        const got = await extract.fromFile(consts.next, t)
+    if (!got) {
+      this.log(consts.messages.noChanges)
+    }
 
-        outs.push({
-          target: t,
-          messages: got,
-        })
-      }),
-    )
-
-    this.log('')
-
-    outs.forEach((o) => {
-      this.log('##', o.target, '\n')
-
-      if (o.messages.length === 0) {
-        this.log(consts.noChanges, consts.postLines)
-        return
-      }
-
-      this.log(o.messages.join('\n'), consts.postLines)
-    })
+    this.log(got!)
   }
-}
-
-interface Section {
-  target: string
-  messages: string[]
 }
