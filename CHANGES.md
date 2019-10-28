@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.5.0
+
+- Minor: Bumped version
+
 ## 0.4.1
 
 - Bugfix: The command 'latest' was not binded into cli
