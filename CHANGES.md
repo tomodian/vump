@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.8.0
+
+- Feature: Added 'only' and 'format' flags to Next command
+
 ## 0.7.0
 
 - Feature: Added 'format' flag in Show command to adopt Slack integration
