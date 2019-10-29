@@ -22,6 +22,12 @@ ${consts.noChanges}
 
   static flags = {
     help: flags.help({ char: 'h' }),
+    only: flags.boolean({
+      char: 'o',
+      description: 'Only show the changes that are included in given version',
+      default: false,
+      required: false,
+    }),
   }
 
   static args = [
@@ -32,7 +38,7 @@ ${consts.noChanges}
   ]
 
   async run() {
-    const { args } = this.parse(Show)
+    const { args, flags } = this.parse(Show)
 
     // Ensure the given name is correct.
     if (!semver.valid(args.version)) {
@@ -54,7 +60,7 @@ ${consts.noChanges}
         const got = await extract.fromFile(args.version, t)
 
         outs.push({
-          target: t,
+          target: extract.omit(t),
           messages: got,
         })
       }),
@@ -63,13 +69,17 @@ ${consts.noChanges}
     this.log('')
 
     outs.forEach((o) => {
-      this.log('##', o.target, '\n')
-
       if (o.messages.length === 0) {
+        if (flags.only) {
+          return
+        }
+
+        this.log('##', o.target, '\n')
         this.log(consts.noChanges, consts.postLines)
         return
       }
 
+      this.log('##', o.target, '\n')
       this.log(o.messages.join('\n'), consts.postLines)
     })
   }

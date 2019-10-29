@@ -1,5 +1,7 @@
 import * as fs from 'fs'
 
+import consts from './consts'
+
 /**
  * Given version and path, return the section.
  */
@@ -87,4 +89,14 @@ export const latest = async (path: string): Promise<string | null> => {
   }
 
   return matched[0]!.split('## ')[1] as string
+}
+
+/**
+ * Omit filename from the given string.
+ */
+export const omit = (given: string): string => {
+  const out = given.replace(`/${consts.file}`, '')
+
+  // Set root (/) path when the outgoing string is empty.
+  return out === consts.file ? '/' : out
 }

@@ -85,3 +85,33 @@ describe('latest', () => {
     }
   })
 })
+
+interface OmitPattern {
+  expected: string
+  test: string
+}
+
+describe('omit', () => {
+  it('returns expected results', async () => {
+    const pats: OmitPattern[] = [
+      {
+        expected: '/',
+        test: 'CHANGES.md',
+      },
+      {
+        expected: '/services',
+        test: '/services/CHANGES.md',
+      },
+    ]
+
+    pats.forEach((p, idx) => {
+      const got = extract.omit(p.test)
+
+      try {
+        expect(got).toEqual(p.expected)
+      } catch (err) {
+        throw new Error(`case ${idx}: expected ${p.expected}, got ${got}, tried ${p.test}, error ${err}`)
+      }
+    })
+  })
+})
