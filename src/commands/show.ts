@@ -3,6 +3,7 @@ import * as semver from 'semver'
 
 import consts from '../common/consts'
 import * as extract from '../common/extract'
+import * as format from '../common/format'
 import glob from '../common/glob'
 
 export default class Show extends Command {
@@ -22,6 +23,18 @@ ${consts.noChanges}
 
   static flags = {
     help: flags.help({ char: 'h' }),
+    format: flags.string({
+      char: 'f',
+      description: 'Specify output format',
+      default: format.Output.markdown,
+      multiple: false,
+      options: [
+        // List output options.
+        format.Output.markdown,
+        format.Output.slack,
+      ],
+      required: false,
+    }),
     only: flags.boolean({
       char: 'o',
       description: 'Only show the changes that are included in given version',
@@ -69,17 +82,22 @@ ${consts.noChanges}
     this.log('')
 
     outs.forEach((o) => {
+      const header = format.header({
+        format: flags.format as any,
+        value: o.target,
+      })
+
       if (o.messages.length === 0) {
         if (flags.only) {
           return
         }
 
-        this.log('##', o.target, '\n')
+        this.log(header, '\n')
         this.log(consts.noChanges, consts.postLines)
         return
       }
 
-      this.log('##', o.target, '\n')
+      this.log(header, '\n')
       this.log(o.messages.join('\n'), consts.postLines)
     })
   }
