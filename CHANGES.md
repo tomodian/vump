@@ -2,6 +2,8 @@
 
 ## Next
 
+## 0.7.0
+
 - Feature: Added 'format' flag in Show command to adopt Slack integration
 
 ## 0.6.0
