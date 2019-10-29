@@ -2,6 +2,8 @@
 
 ## Next
 
+- Feature: Added 'only' flag in Show command to hide redundant outputs
+
 ## 0.5.0
 
 - Minor: Bumped version
