@@ -60,7 +60,7 @@ ${consts.noChanges}
         const got = await extract.fromFile(args.version, t)
 
         outs.push({
-          target: t,
+          target: extract.omit(t),
           messages: got,
         })
       }),

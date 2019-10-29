@@ -2,6 +2,7 @@
 
 ## Next
 
+- Refactor: Removed filename from Show command output
 - Feature: Added 'only' flag in Show command to hide redundant outputs
 
 ## 0.5.0

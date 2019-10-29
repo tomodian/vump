@@ -9,14 +9,12 @@ export default class Next extends Command {
 
   static examples = [
     `$ vump next
-## examples/CHANGES.md
 
-- Feature: This is an example
+  ## examples/CHANGES.md
+  - Feature: This is an example
 
-## examples/services/a/CHANGES.md
-
-${consts.noChanges}
-`,
+  ## examples/services/a/CHANGES.md
+  ${consts.noChanges}`,
   ]
 
   static flags = {
