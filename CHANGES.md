@@ -2,6 +2,8 @@
 
 ## Next
 
+## 0.9.0
+
 - Feature: Sort show output
 
 ## 0.8.0
