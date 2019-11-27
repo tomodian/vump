@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.10.0
+
+- Feature: Sort next output
+
 ## 0.9.0
 
 - Feature: Sort show output
