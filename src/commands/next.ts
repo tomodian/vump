@@ -67,6 +67,9 @@ export default class Next extends Command {
 
     this.log('')
 
+    // Sort by target name.
+    outs.sort((a, b) => (a.target > b.target ? 1 : -1))
+
     outs.forEach((o) => {
       const header = format.header({
         format: flags.format as any,
