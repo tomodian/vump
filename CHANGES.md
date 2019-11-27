@@ -2,6 +2,8 @@
 
 ## Next
 
+- Feature: Sort show output
+
 ## 0.8.0
 
 - Feature: Added 'only' and 'format' flags to Next command

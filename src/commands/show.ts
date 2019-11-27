@@ -5,6 +5,7 @@ import consts from '../common/consts'
 import * as extract from '../common/extract'
 import * as format from '../common/format'
 import glob from '../common/glob'
+import { listenerCount } from 'cluster'
 
 export default class Show extends Command {
   static description = 'Show previous changes in the given section'
@@ -80,6 +81,9 @@ ${consts.noChanges}
     )
 
     this.log('')
+
+    // Sort by target name.
+    outs.sort((a, b) => (a.target > b.target ? 1 : -1))
 
     outs.forEach((o) => {
       const header = format.header({
