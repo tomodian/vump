@@ -1,7 +1,7 @@
 {
   "name": "vump",
   "description": "CLI tool to bump your CHANGES.md, following semver",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "author": "Hayato Tomoda @tomodian",
   "bin": {
     "vump": "./bin/run"
