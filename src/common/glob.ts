@@ -6,10 +6,12 @@ const glob = (matcher: string): string[] => {
       // Excludes
       '!node_modules',
       '!**/node_modules',
+      '!.git',
       // Includes
       matcher,
     ],
     {
+      dot: true,
       onlyFiles: true,
     },
   )
