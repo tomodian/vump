@@ -2,6 +2,10 @@
 
 ## Next
 
+## 0.11.0
+
+- Feature: Included directories starts with dot
+
 ## 0.10.0
 
 - Feature: Sort next output
